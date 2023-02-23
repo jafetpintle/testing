@@ -4,16 +4,16 @@ package com.me.javatest.util;
 public class StringUtilTest {
     public static void main(String[] args) {
 
-        String result = StringUtil.repeat("Hello",3);
-        System.out.println(result);
-        if(!result.equals("HelloHelloHello"))
-            System.out.println("Ok");
+        assertEquals(StringUtil.repeat("Hello",3),"HelloHelloHello");
 
-        String result2 = StringUtil.repeat("Hello",1);
-        System.out.println(result2);
-        if(!result2.equals("Hello"))
-            System.out.println("Error");
+        assertEquals(StringUtil.repeat("Hello",1), "Hello");
 
+    }
 
+    private static void assertEquals(String actual, String expected) {
+        if(!actual.equals(expected))
+            throw new RuntimeException(actual + " is not equals to "+expected);
+        else
+            System.out.println("Test succesfull...");
     }
 }
