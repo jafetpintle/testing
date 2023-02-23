@@ -12,4 +12,14 @@ public class StringUtil {
         }
         return result.toString();
     }
+
+    public static boolean isEmpty(String str){
+        str = str.trim();
+        if(str == null || str.length() == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

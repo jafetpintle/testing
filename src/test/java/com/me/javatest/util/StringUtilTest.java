@@ -25,4 +25,25 @@ public class StringUtilTest {
         StringUtil.repeat("Hello", -1);
     }
 
+    @Test
+    public void isEmpty_emptyString_true(){
+        Assert.assertTrue(StringUtil.isEmpty(""));
+    }
+
+    @Test
+    public void isEmpty_notEmptyString_false(){
+        Assert.assertFalse(StringUtil.isEmpty("a"));
+    }
+
+    @Test
+    public void isEmpty_NullString_true(){
+        Assert.assertTrue(StringUtil.isEmpty(null));
+    }
+
+    @Test
+    public void isEmpty_StringWithSpaces_true(){
+        Assert.assertTrue(StringUtil.isEmpty("   "));
+    }
+
+
 }

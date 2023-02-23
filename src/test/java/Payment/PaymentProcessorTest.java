@@ -26,7 +26,7 @@ public class PaymentProcessorTest {
     @Test
     public void makePayment_wrongPayment(){
         Mockito.when(paymentGateway.requestPayment(Mockito.any())).thenReturn(new PaymentResponse(PaymentResponse.PaymentStatus.ERROR));
-        
+
         Assert.assertFalse(paymentProcessor.makePayment(1000));
     }
 
