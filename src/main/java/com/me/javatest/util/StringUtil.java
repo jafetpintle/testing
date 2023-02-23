@@ -4,6 +4,8 @@ public class StringUtil {
 
     public static String repeat(String str, int n){
         StringBuilder result = new StringBuilder();
+        if(n <0 )
+            throw new IllegalArgumentException("Negative numbers are not allowed");
 
         for (int i = 0; i <n; i++) {
             result.append(str);
